@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Mac流派," />
 
 
 
@@ -86,15 +86,33 @@
 
 
 
-<meta name="description" content="此间虽乐，可不思蜀？">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Front-end">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Mac安装nginx小结使用homebrew安装nginx
+安装nginxbrew install nginx在终端中执行上面的指令，即可安装nginx的最新稳定版。（以下所有教程只针对brew安装的nginx，其他版本未经测试）
+
+查看安装的nginx版本nginx -v    
+
+以管理员权限启动nginxsudo nginx如果启动成功，此时可以在浏览器地址栏输入”localhost:808">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac安装nginx小结">
+<meta property="og:url" content="http://yoursite.com/2016/12/21/Mac-安装nginx小结/index.html">
 <meta property="og:site_name" content="Front-end">
-<meta property="og:description" content="此间虽乐，可不思蜀？">
+<meta property="og:description" content="Mac安装nginx小结使用homebrew安装nginx
+安装nginxbrew install nginx在终端中执行上面的指令，即可安装nginx的最新稳定版。（以下所有教程只针对brew安装的nginx，其他版本未经测试）
+
+查看安装的nginx版本nginx -v    
+
+以管理员权限启动nginxsudo nginx如果启动成功，此时可以在浏览器地址栏输入”localhost:808">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/68cfab99jw1fay8kx5mcqj21kw0h5q61.jpg">
+<meta property="og:updated_time" content="2016-12-21T04:04:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Front-end">
-<meta name="twitter:description" content="此间虽乐，可不思蜀？">
+<meta name="twitter:title" content="Mac安装nginx小结">
+<meta name="twitter:description" content="Mac安装nginx小结使用homebrew安装nginx
+安装nginxbrew install nginx在终端中执行上面的指令，即可安装nginx的最新稳定版。（以下所有教程只针对brew安装的nginx，其他版本未经测试）
+
+查看安装的nginx版本nginx -v    
+
+以管理员权限启动nginxsudo nginx如果启动成功，此时可以在浏览器地址栏输入”localhost:808">
+<meta name="twitter:image" content="http://ww4.sinaimg.cn/large/68cfab99jw1fay8kx5mcqj21kw0h5q61.jpg">
 
 
 
@@ -122,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/12/21/Mac-安装nginx小结/"/>
 
 
 
 
 
-  <title> Front-end - 此间虽乐，可不思蜀？ </title>
+  <title> Mac安装nginx小结 | Front-end </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -149,9 +167,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -252,9 +268,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -287,10 +303,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/12/21/Mac-安装nginx小结/" itemprop="url">
-                  Mac安装nginx小结
-                </a>
+                Mac安装nginx小结
               
             
           </h1>
@@ -384,9 +397,7 @@
       
 
       
-        
-          
-            <h1 id="Mac安装nginx小结"><a href="#Mac安装nginx小结" class="headerlink" title="Mac安装nginx小结"></a>Mac安装nginx小结</h1><h2 id="使用homebrew安装nginx"><a href="#使用homebrew安装nginx" class="headerlink" title="使用homebrew安装nginx"></a>使用homebrew安装nginx</h2><ol>
+        <h1 id="Mac安装nginx小结"><a href="#Mac安装nginx小结" class="headerlink" title="Mac安装nginx小结"></a>Mac安装nginx小结</h1><h2 id="使用homebrew安装nginx"><a href="#使用homebrew安装nginx" class="headerlink" title="使用homebrew安装nginx"></a>使用homebrew安装nginx</h2><ol>
 <li><p>安装nginx<br><code>brew install nginx</code><br>在终端中执行上面的指令，即可安装nginx的最新稳定版。<br>（以下所有教程只针对brew安装的nginx，其他版本未经测试）</p>
 </li>
 <li><p>查看安装的nginx版本<br><code>nginx -v</code>    </p>
@@ -412,349 +423,62 @@
 <p>这样可以为各级目录添加权限，但很麻烦，建议使用第一种方法。</p>
 <h2 id="其他常用命令"><a href="#其他常用命令" class="headerlink" title="其他常用命令"></a>其他常用命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">sudo nginx              #启动nginx</div><div class="line">sudo nginx -s reload    #修改配置后重新加载生效</div><div class="line">#简单解释下，上面这种方法重启，nginx在重启的时候不会中断服务，因为  nginx在启动后，会有一个master进程和多个worker进程，重启是会先生成新的worker进程去接受reload命令，等老的worker进程执行完毕，master进程在关闭他们，所以服务器不会中断。</div><div class="line">sudo nginx -s  reopen   #重新打开日志文件</div><div class="line">sudo nginx -s stop  #快速停止nginx</div><div class="line">sudo nginx -s quit  #完整有序的停止nginx</div><div class="line">sudo nginx -t     #测试当前配置文件是否正确</div></pre></td></tr></table></figure>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/20/my-first-blog/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Nick Arron">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/uploads/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Front-end">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Front-end" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/20/my-first-blog/" itemprop="url">
-                  markdown语法
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-20T14:33:34+08:00">
-                2016-12-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/Mac流派/" rel="tag"># Mac流派</a>
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/12/20/my-first-blog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/20/my-first-blog/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/20/my-first-blog/" class="leancloud_visitors" data-flag-title="markdown语法">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h1 id="markdown语法"><a href="#markdown语法" class="headerlink" title="markdown语法"></a>markdown语法</h1><p>这是我的第一篇博客，这两天简单看了下markdown的语法，这里尝试一下。</p>
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/20/my-first-blog/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/20/my-first-blog/" rel="next" title="markdown语法">
+                <i class="fa fa-chevron-left"></i> markdown语法
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
+          <span class="post-nav-divider"></span>
 
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/20/hello-world/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Nick Arron">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/uploads/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Front-end">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Front-end" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/20/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-20T14:26:25+08:00">
-                2016-12-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/test/" itemprop="url" rel="index">
-                    <span itemprop="name">test</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/12/20/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/20/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/20/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/20/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -762,6 +486,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/12/21/Mac-安装nginx小结/"
+           data-title="Mac安装nginx小结" data-url="http://yoursite.com/2016/12/21/Mac-安装nginx小结/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -781,8 +513,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.gif"
@@ -889,6 +630,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mac安装nginx小结"><span class="nav-number">1.</span> <span class="nav-text">Mac安装nginx小结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用homebrew安装nginx"><span class="nav-number">1.1.</span> <span class="nav-text">使用homebrew安装nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可能出现的问题"><span class="nav-number">1.2.</span> <span class="nav-text">可能出现的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他常用命令"><span class="nav-number">1.3.</span> <span class="nav-text">其他常用命令</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -986,6 +743,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
