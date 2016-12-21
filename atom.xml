@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-21T04:48:28.000Z</updated>
+  <updated>2016-12-21T04:50:05.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/12/21/Mac-%E5%AE%89%E8%A3%85nginx%E5%B0%8F%E7%BB%93/"/>
     <id>http://yoursite.com/2016/12/21/Mac-安装nginx小结/</id>
     <published>2016-12-21T02:52:23.000Z</published>
-    <updated>2016-12-21T04:48:28.000Z</updated>
+    <updated>2016-12-21T04:50:05.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Mac下配置nginx"><a href="#Mac下配置nginx" class="headerlink" title="Mac下配置nginx"></a>Mac下配置nginx</h2><h3 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h3><p><code>brew install nginx</code><br>在终端中执行上面的指令，即可安装nginx的最新稳定版。<br>（以下所有教程只针对brew安装的nginx，其他版本未经测试）<br><a id="more"></a></p>
 <h3 id="查看安装的nginx版本"><a href="#查看安装的nginx版本" class="headerlink" title="查看安装的nginx版本"></a>查看安装的nginx版本</h3><p>执行<code>nginx -v</code>即可查看当前nginx版本</p>
@@ -35,12 +35,11 @@
 <li><p>报错”nginx: [emerg] bind() to 0.0.0.0:8080 failed (48: Address already in use)”</p>
 <p>  这种情况是端口已经被占用，可能是之前启动了   apache服务，已经占用了80端口，把listen的端口换一个就可以</p>
 </li>
-<li><p>报错”403 Forbidden”</p>
-<p>  这种情况是nginx的user项是nobody，无权访问当前的目录，网上有两种解决方法，比较简单的是直接修改user为root或者当前的用户名，user配置在nginx.conf的第一行，将其修改为<br><code>#user root</code><br>然后在终端里执行<br><code>sudo nginx -s reload</code><br>重新启动nginx。<br>第二种方法是为当前目录添加权限，使任何人都可以访问，在终端里依次执行以下命令。</p>
+<li><p>报错”403 Forbidden”<br>  这种情况是nginx的user项是nobody，无权访问当前的目录，网上有两种解决方法，比较简单的是直接修改user为root或者当前的用户名，user配置在nginx.conf的第一行，将其修改为<br><code>#user root</code><br>然后在终端里执行<br><code>sudo nginx -s reload</code><br>重新启动nginx。<br>第二种方法是为当前目录添加权限，使任何人都可以访问，在终端里依次执行以下命令。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">chmod o+x User/user</div><div class="line">chmod o+x User/user/Documents</div><div class="line">...</div><div class="line">chmod o+x User/user/.../html</div><div class="line">chmod o+x User/user/.../html/js</div><div class="line">chmod o+x User/user/.../html/css</div><div class="line">chmod o+x User/user/.../html/img</div></pre></td></tr></table></figure>
+<p>  这样可以为各级目录添加权限，但很麻烦，建议使用第一种方法。</p>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">chmod o+x User/user</div><div class="line">chmod o+x User/user/Documents</div><div class="line">...</div><div class="line">chmod o+x User/user/.../html</div><div class="line">chmod o+x User/user/.../html/js</div><div class="line">chmod o+x User/user/.../html/css</div><div class="line">chmod o+x User/user/.../html/img</div></pre></td></tr></table></figure>
-<p>这样可以为各级目录添加权限，但很麻烦，建议使用第一种方法。</p>
 <h2 id="其他常用命令"><a href="#其他常用命令" class="headerlink" title="其他常用命令"></a>其他常用命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">sudo nginx              #启动nginx</div><div class="line">sudo nginx -s reload    #修改配置后重新加载生效</div><div class="line">sudo nginx -s reopen   #重新打开日志文件</div><div class="line">sudo nginx -s stop  #快速停止nginx</div><div class="line">sudo nginx -s quit  #完整有序的停止nginx</div><div class="line">sudo nginx -t     #测试当前配置文件是否正确</div></pre></td></tr></table></figure>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
 <li><a href="http://learnaholic.me/2012/10/10/installing-nginx-in-mac-os-x-mountain-lion/" target="_blank" rel="external">Mac下nginx配置</a></li>
