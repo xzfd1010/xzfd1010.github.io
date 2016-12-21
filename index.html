@@ -394,23 +394,23 @@
 <li><p>以管理员权限启动nginx<br><code>sudo nginx</code><br>如果启动成功，此时可以在浏览器地址栏输入”localhost:8080”，可以打开默认页面。<br>效果如下：<br><img src="http://ww4.sinaimg.cn/large/68cfab99jw1fay8kx5mcqj21kw0h5q61.jpg" alt="nginx配置成功效果图"></p>
 </li>
 <li><p>配置启动目录<br>目前nginx监听的端口是8080，存放代码的路径是”/usr/local/var/www”，可以在nginx的配置文件中看到，所以现在就要修改nginx配置文件中的代码路径，来部署我们自己的代码。<br>如果通过命令行来修改，执行<br><code>vim /usr/local/etc/nginx/nginx.conf</code><br>打开nginx.conf文件，找到</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">        listen       8080;</div><div class="line">        server_name  localhost;</div><div class="line">        </div><div class="line">        #access_log  logs/host.access.log  main;</div><div class="line">    </div><div class="line">        location / &#123;</div><div class="line">            root   html;</div><div class="line">            index  index.html index.htm;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"> server &#123;</div><div class="line">    listen       8080;</div><div class="line">    server_name  localhost;</div><div class="line">    </div><div class="line">    #access_log  logs/host.access.log  main;</div><div class="line"></div><div class="line">    location / &#123;</div><div class="line">        root   html;</div><div class="line">        index  index.html index.htm;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p> 其中listen 后面是端口号，server_name是匹配的url地址，location中的root是代码的根目录，index是启动项的名称。<br>nginx的一大优势是可以同时监听多个端口，所以我们可以在下面再启动一个server，定义如下</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">    listen       80;</div><div class="line">    server_name  localhost;</div><div class="line"></div><div class="line">    #access_log  logs/host.access.log  main;</div><div class="line"></div><div class="line">    location / &#123;</div><div class="line">        root   /Users/user/www;</div><div class="line">        index  index.html index.htm;</div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>此时在地址栏中输入”localhost:80”即可访问对应的目录。</p>
-<h2 id="可能出现的问题"><a href="#可能出现的问题" class="headerlink" title="可能出现的问题"></a>可能出现的问题</h2><pre><code>* 报错&quot;nginx: [emerg] bind() to 0.0.0.0:8080 failed (48: Address already in use)&quot;
-
-    这种情况是端口已经被占用，可能是之前启动了   apache服务，已经占用了80端口，把listen的端口换一个就可以
-
-* 报错&quot;403 Forbidden&quot;
-
-    这种情况是nginx的user项是nobody，无权访问当前的目录，网上有两种解决方法，比较简单的是直接修改user为root或者当前的用户名，user配置在nginx.conf的第一行，将其修改为
-</code></pre><p><code>#user root</code><br>然后在终端里执行<br><code>sudo nginx -s reload</code><br>重新启动nginx。<br>第二种方法是为当前目录添加权限，使任何人都可以访问，在终端里依次执行以下命令。</p>
+<h2 id="可能出现的问题"><a href="#可能出现的问题" class="headerlink" title="可能出现的问题"></a>可能出现的问题</h2><ul>
+<li><p>报错”nginx: [emerg] bind() to 0.0.0.0:8080 failed (48: Address already in use)”</p>
+<p>  这种情况是端口已经被占用，可能是之前启动了   apache服务，已经占用了80端口，把listen的端口换一个就可以</p>
+</li>
+<li><p>报错”403 Forbidden”</p>
+<p>  这种情况是nginx的user项是nobody，无权访问当前的目录，网上有两种解决方法，比较简单的是直接修改user为root或者当前的用户名，user配置在nginx.conf的第一行，将其修改为<br><code>#user root</code><br>然后在终端里执行<br><code>sudo nginx -s reload</code><br>重新启动nginx。<br>第二种方法是为当前目录添加权限，使任何人都可以访问，在终端里依次执行以下命令。</p>
 <pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">chmod o+x User/user</div><div class="line">chmod o+x User/user/Documents</div><div class="line">...</div><div class="line">chmod o+x User/user/.../html</div><div class="line">chmod o+x User/user/.../html/js</div><div class="line">chmod o+x User/user/.../html/css</div><div class="line">chmod o+x User/user/.../html/img</div></pre></td></tr></table></figure>
-</code></pre><p>这样可以为各级目录添加权限，但很麻烦，建议使用第一种方法。</p>
-<h2 id="其他常用命令"><a href="#其他常用命令" class="headerlink" title="其他常用命令"></a>其他常用命令</h2><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">sudo nginx              #启动nginx</div><div class="line">sudo nginx -s reload    #修改配置后重新加载生效</div><div class="line">sudo nginx -s  reopen   #重新打开日志文件</div><div class="line">sudo nginx -s stop  #快速停止nginx</div><div class="line">sudo nginx -s quit  #完整有序的停止nginx</div><div class="line">sudo nginx -t     #测试当前配置文件是否正确</div></pre></td></tr></table></figure>
+</code></pre></li>
+</ul>
+<p>这样可以为各级目录添加权限，但很麻烦，建议使用第一种方法。</p>
+<h2 id="其他常用命令"><a href="#其他常用命令" class="headerlink" title="其他常用命令"></a>其他常用命令</h2><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">sudo nginx              #启动nginx</div><div class="line">sudo nginx -s reload    #修改配置后重新加载生效</div><div class="line">sudo nginx -s  reopen   #重新打开日志文    件</div><div class="line">sudo nginx -s stop  #快速停止nginx</div><div class="line">sudo nginx -s quit  #完整有序的停止nginx</div><div class="line">sudo nginx -t     #测试当前配置文件是否正确</div></pre></td></tr></table></figure>
 </code></pre>
           
         
