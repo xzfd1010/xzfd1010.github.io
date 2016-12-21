@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-21T04:47:26.000Z</updated>
+  <updated>2016-12-21T04:48:28.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="http://yoursite.com/2016/12/21/Mac-%E5%AE%89%E8%A3%85nginx%E5%B0%8F%E7%BB%93/"/>
     <id>http://yoursite.com/2016/12/21/Mac-安装nginx小结/</id>
     <published>2016-12-21T02:52:23.000Z</published>
-    <updated>2016-12-21T04:47:26.000Z</updated>
+    <updated>2016-12-21T04:48:28.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Mac下配置nginx"><a href="#Mac下配置nginx" class="headerlink" title="Mac下配置nginx"></a>Mac下配置nginx</h2><h3 id="1-安装nginx"><a href="#1-安装nginx" class="headerlink" title="1. 安装nginx"></a>1. 安装nginx</h3><p><code>brew install nginx</code><br>在终端中执行上面的指令，即可安装nginx的最新稳定版。<br>（以下所有教程只针对brew安装的nginx，其他版本未经测试）<br><a id="more"></a></p>
-<h3 id="2-查看安装的nginx版本"><a href="#2-查看安装的nginx版本" class="headerlink" title="2. 查看安装的nginx版本"></a>2. 查看安装的nginx版本</h3><p>执行<code>nginx -v</code>即可查看当前nginx版本</p>
-<h3 id="3-以管理员权限启动nginx"><a href="#3-以管理员权限启动nginx" class="headerlink" title="3. 以管理员权限启动nginx"></a>3. 以管理员权限启动nginx</h3><p><code>sudo nginx</code><br>如果启动成功，此时可以在浏览器地址栏输入”localhost:8080”，可以打开默认页面。<br>效果如下：<br><img src="http://ww4.sinaimg.cn/large/68cfab99jw1fay8kx5mcqj21kw0h5q61.jpg" alt="nginx配置成功效果图"></p>
-<h3 id="4-配置启动目录"><a href="#4-配置启动目录" class="headerlink" title="4. 配置启动目录"></a>4. 配置启动目录</h3><p>目前nginx监听的端口是8080，存放代码的路径是”/usr/local/var/www”，可以在nginx的配置文件中看到，所以现在就要修改nginx配置文件中的代码路径，来部署我们自己的代码。<br>如果通过命令行来修改，执行<br><code>vim /usr/local/etc/nginx/nginx.conf</code></p>
+    <content type="html"><![CDATA[<h2 id="Mac下配置nginx"><a href="#Mac下配置nginx" class="headerlink" title="Mac下配置nginx"></a>Mac下配置nginx</h2><h3 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h3><p><code>brew install nginx</code><br>在终端中执行上面的指令，即可安装nginx的最新稳定版。<br>（以下所有教程只针对brew安装的nginx，其他版本未经测试）<br><a id="more"></a></p>
+<h3 id="查看安装的nginx版本"><a href="#查看安装的nginx版本" class="headerlink" title="查看安装的nginx版本"></a>查看安装的nginx版本</h3><p>执行<code>nginx -v</code>即可查看当前nginx版本</p>
+<h3 id="以管理员权限启动nginx"><a href="#以管理员权限启动nginx" class="headerlink" title="以管理员权限启动nginx"></a>以管理员权限启动nginx</h3><p><code>sudo nginx</code><br>如果启动成功，此时可以在浏览器地址栏输入”localhost:8080”，可以打开默认页面。<br>效果如下：<br><img src="http://ww4.sinaimg.cn/large/68cfab99jw1fay8kx5mcqj21kw0h5q61.jpg" alt="nginx配置成功效果图"></p>
+<h3 id="配置启动目录"><a href="#配置启动目录" class="headerlink" title="配置启动目录"></a>配置启动目录</h3><p>目前nginx监听的端口是8080，存放代码的路径是”/usr/local/var/www”，可以在nginx的配置文件中看到，所以现在就要修改nginx配置文件中的代码路径，来部署我们自己的代码。<br>如果通过命令行来修改，执行<br><code>vim /usr/local/etc/nginx/nginx.conf</code></p>
 <p>打开nginx.conf文件，找到</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">       listen       8080;</div><div class="line">       server_name  localhost;</div><div class="line">       </div><div class="line">       #access_log  logs/host.access.log  main;</div><div class="line">   </div><div class="line">       location / &#123;</div><div class="line">           root   html;</div><div class="line">           index  index.html index.htm;</div><div class="line">       &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
 <p>其中listen 后面是端口号，server_name是匹配的url地址，location中的root是代码的根目录，index是启动项的名称。<br>nginx的一大优势是可以同时监听多个端口，所以我们可以在下面再启动一个server，定义如下</p>
@@ -50,7 +50,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Mac下配置nginx&quot;&gt;&lt;a href=&quot;#Mac下配置nginx&quot; class=&quot;headerlink&quot; title=&quot;Mac下配置nginx&quot;&gt;&lt;/a&gt;Mac下配置nginx&lt;/h2&gt;&lt;h3 id=&quot;1-安装nginx&quot;&gt;&lt;a href=&quot;#1-安装nginx&quot; class=&quot;headerlink&quot; title=&quot;1. 安装nginx&quot;&gt;&lt;/a&gt;1. 安装nginx&lt;/h3&gt;&lt;p&gt;&lt;code&gt;brew install nginx&lt;/code&gt;&lt;br&gt;在终端中执行上面的指令，即可安装nginx的最新稳定版。&lt;br&gt;（以下所有教程只针对brew安装的nginx，其他版本未经测试）&lt;br&gt;
+      &lt;h2 id=&quot;Mac下配置nginx&quot;&gt;&lt;a href=&quot;#Mac下配置nginx&quot; class=&quot;headerlink&quot; title=&quot;Mac下配置nginx&quot;&gt;&lt;/a&gt;Mac下配置nginx&lt;/h2&gt;&lt;h3 id=&quot;安装nginx&quot;&gt;&lt;a href=&quot;#安装nginx&quot; class=&quot;headerlink&quot; title=&quot;安装nginx&quot;&gt;&lt;/a&gt;安装nginx&lt;/h3&gt;&lt;p&gt;&lt;code&gt;brew install nginx&lt;/code&gt;&lt;br&gt;在终端中执行上面的指令，即可安装nginx的最新稳定版。&lt;br&gt;（以下所有教程只针对brew安装的nginx，其他版本未经测试）&lt;br&gt;
     
     </summary>
     
