@@ -23,42 +23,5 @@
     </url>
 
     
-  <url>
-    <loc>http://yoursite.com/2016/12/20/hello-world/</loc>
-    <lastmod>2016-12-20T11:05:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2016-12-20T06:26:25.000Z</pubTime>
-        
-        <tag>PS3</tag>
-         
-        <tag>Games</tag>
-         
-         
-           
-             
-              <breadCrumb title="test" url="http://yoursite.com/categories/test/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
-    
-    
-  <url>
-    <loc>http://yoursite.com/2016/12/20/my-first-blog/</loc>
-    <lastmod>2016-12-20T08:34:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>markdown语法</title>
-        <pubTime>2016-12-20T06:33:34.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
 </urlset>
