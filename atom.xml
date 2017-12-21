@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-21T04:52:01.000Z</updated>
+  <updated>2017-12-21T06:05:06.792Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用DeDRM去除kindle的DRM保护</title>
+    <link href="http://yoursite.com/2017/12/21/essay/"/>
+    <id>http://yoursite.com/2017/12/21/essay/</id>
+    <published>2017-12-21T06:04:18.000Z</published>
+    <updated>2017-12-21T06:05:06.792Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="使用DeDRM去除kindle的DRM保护"><a href="#使用DeDRM去除kindle的DRM保护" class="headerlink" title="使用DeDRM去除kindle的DRM保护"></a>使用DeDRM去除kindle的DRM保护</h1><h2 id="下载软件"><a href="#下载软件" class="headerlink" title="下载软件"></a>下载软件</h2><ol>
+<li>通常使用<a href="https://calibre-ebook.com/download" target="_blank" rel="external">calibre</a>来管理kindle书库</li>
+<li><a href="https://github.com/apprenticeharper/DeDRM_tools/blob/master/DeDRM_calibre_plugin/DeDRM_plugin.zip/" target="_blank" rel="external">calibre用于破解DeDRM的插件——DeDRM</a>，认准这家，网上其他插件可能我用的方法不对或者已经失效了，没有可用的。此插件可以单独使用，也可以和calibre结合，本文只针对使用calibre的情况。如下所示：<br><img src="https://ws1.sinaimg.cn/large/68cfab99ly1fmobznrwe5j21n80lqjvg.jpg" alt=""></li>
+</ol>
+<h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><ol>
+<li>Calibre -&gt; Preferences -&gt; 插件（高级选项中）-&gt; 从文件加载插件（右下角），会报一些警告，忽略即可。如图：<br><img src="https://ws1.sinaimg.cn/large/68cfab99ly1fmobyuiz3oj21fo1587gq.jpg" alt=""></li>
+<li>双击插件，打开选项 ‘eInk Kindle ebooks’，添加自己kindle的序列号，是必须的，否则破解DRM的时候会报错。序列号在kindle上，查看方法请自行百度。<br> <img src="https://ws1.sinaimg.cn/large/68cfab99ly1fmoc8hkr9aj20m20wen0u.jpg" alt="">    </li>
+<li>从亚马逊下载书籍，在”管理我的内容和设备”中，点击左侧的三个点的按钮，下载书籍到电脑上。<br><img src="https://ws1.sinaimg.cn/large/68cfab99ly1fmocce6mctj20ya0hy45y.jpg" alt=""></li>
+<li>把书导入calibre，即可自动破解。然后发送到kindle/邮箱即可。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;使用DeDRM去除kindle的DRM保护&quot;&gt;&lt;a href=&quot;#使用DeDRM去除kindle的DRM保护&quot; class=&quot;headerlink&quot; title=&quot;使用DeDRM去除kindle的DRM保护&quot;&gt;&lt;/a&gt;使用DeDRM去除kindle的DRM保护&lt;/
+    
+    </summary>
+    
+    
+      <category term="Mac" scheme="http://yoursite.com/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac安装nginx小结</title>
