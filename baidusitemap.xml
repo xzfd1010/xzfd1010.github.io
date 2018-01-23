@@ -5,14 +5,39 @@
     
   <url>
     <loc>http://yoursite.com/2018/01/23/webstorm%E6%BF%80%E6%B4%BB%EF%BC%882017.3.3%EF%BC%89/</loc>
-    <lastmod>2018-01-23T03:39:12.456Z</lastmod>
+    <lastmod>2018-01-23T03:41:48.796Z</lastmod>
     <data>
         <display>
-        <title></title>
-        <pubTime>2018-01-23T03:23:03.097Z</pubTime>
+        <title>Mac安装nginx小结</title>
+        <pubTime>2018-01-23T03:41:22.000Z</pubTime>
         
+        <tag>Mac</tag>
+         
          
            
+             
+              <breadCrumb title="Mac" url="http://yoursite.com/categories/Mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/12/21/Mac-%E5%AE%89%E8%A3%85nginx%E5%B0%8F%E7%BB%93/</loc>
+    <lastmod>2018-01-23T03:41:17.581Z</lastmod>
+    <data>
+        <display>
+        <title>Mac安装nginx小结</title>
+        <pubTime>2016-12-21T02:52:23.000Z</pubTime>
+        
+        <tag>Mac</tag>
+         
+         
+           
+             
+              <breadCrumb title="Mac" url="http://yoursite.com/categories/Mac/"/>
+          
         </display>
     </data>
     </url>
@@ -30,26 +55,6 @@
          
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/12/21/Mac-%E5%AE%89%E8%A3%85nginx%E5%B0%8F%E7%BB%93/</loc>
-    <lastmod>2016-12-21T04:52:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>Mac安装nginx小结</title>
-        <pubTime>2016-12-21T02:52:23.000Z</pubTime>
-        
-        <tag>Mac流派</tag>
-         
-         
-           
-             
-              <breadCrumb title="Mac" url="http://yoursite.com/categories/Mac/"/>
-          
         </display>
     </data>
     </url>

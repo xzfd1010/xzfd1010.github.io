@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-23T03:39:12.456Z</updated>
+  <updated>2018-01-23T03:41:48.796Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>Mac安装nginx小结</title>
     <link href="http://yoursite.com/2018/01/23/webstorm%E6%BF%80%E6%B4%BB%EF%BC%882017.3.3%EF%BC%89/"/>
     <id>http://yoursite.com/2018/01/23/webstorm激活（2017.3.3）/</id>
-    <published>2018-01-23T03:23:03.097Z</published>
-    <updated>2018-01-23T03:39:12.456Z</updated>
+    <published>2018-01-23T03:41:22.000Z</published>
+    <updated>2018-01-23T03:41:48.796Z</updated>
     
     <content type="html"><![CDATA[<h1 id="WebStorm激活（2017-3-3）"><a href="#WebStorm激活（2017-3-3）" class="headerlink" title="WebStorm激活（2017.3.3）"></a>WebStorm激活（2017.3.3）</h1><p>最新版本的WebStorm更新后，无法再使用网上的那些license server ，activation code也是激活后立即失效。查到的新方法参考<a href="http://blog.lanyus.com/archives/174.html" target="_blank" rel="noopener">lan yu博客</a>。</p><h2 id="步骤如下："><a href="#步骤如下：" class="headerlink" title="步骤如下："></a>步骤如下：</h2><ol><li>下载破解文件<br>链接: <a href="https://pan.baidu.com/s/1dFS9DaL" target="_blank" rel="noopener">https://pan.baidu.com/s/1dFS9DaL</a><br>密码: xxc2</li><li>找到对应的系统版本，mac系统对应的是IntelliJIDEALicenseServer_darwin_amd64。双击打开运行。</li><li>打开WebStorm，Help -&gt; Register -&gt; License Server，填写License Server，为 <a href="http://127.0.0.1:1027" target="_blank" rel="noopener">http://127.0.0.1:1027</a> ,点击Activate即可激活<img src="http://p289f8g58.bkt.clouddn.com/markdown/20180123113013.png" alt="markdown/20180123113013.png"></li></ol><h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><ol><li>此方法只验证mac版本，其他系统不能保证一定有效。</li><li>参考资料：<a href="http://blog.lanyus.com/archives/174.html" target="_blank" rel="noopener">lan yu博客</a></li><li>lanyu博客中也提供了反向代理工具，但尝试后没有成功，各位也可以试试。</li></ol>]]></content>
     
@@ -34,6 +34,10 @@
     
     </summary>
     
+      <category term="Mac" scheme="http://yoursite.com/categories/Mac/"/>
+    
+    
+      <category term="Mac" scheme="http://yoursite.com/tags/Mac/"/>
     
   </entry>
   
@@ -65,7 +69,7 @@
     <link href="http://yoursite.com/2016/12/21/Mac-%E5%AE%89%E8%A3%85nginx%E5%B0%8F%E7%BB%93/"/>
     <id>http://yoursite.com/2016/12/21/Mac-安装nginx小结/</id>
     <published>2016-12-21T02:52:23.000Z</published>
-    <updated>2016-12-21T04:52:01.000Z</updated>
+    <updated>2018-01-23T03:41:17.581Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Mac下配置nginx"><a href="#Mac下配置nginx" class="headerlink" title="Mac下配置nginx"></a>Mac下配置nginx</h2><h3 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h3><p><code>brew install nginx</code><br>在终端中执行上面的指令，即可安装nginx的最新稳定版。<br>（以下所有教程只针对brew安装的nginx，其他版本未经测试）<br><a id="more"></a></p><h3 id="查看安装的nginx版本"><a href="#查看安装的nginx版本" class="headerlink" title="查看安装的nginx版本"></a>查看安装的nginx版本</h3><p>执行<code>nginx -v</code>即可查看当前nginx版本</p><h3 id="以管理员权限启动nginx"><a href="#以管理员权限启动nginx" class="headerlink" title="以管理员权限启动nginx"></a>以管理员权限启动nginx</h3><p><code>sudo nginx</code><br>如果启动成功，此时可以在浏览器地址栏输入”localhost:8080”，可以打开默认页面。<br>效果如下：<br><img src="http://ww4.sinaimg.cn/large/68cfab99jw1fay8kx5mcqj21kw0h5q61.jpg" alt="nginx配置成功效果图"></p><h3 id="配置启动目录"><a href="#配置启动目录" class="headerlink" title="配置启动目录"></a>配置启动目录</h3><p>目前nginx监听的端口是8080，存放代码的路径是”/usr/local/var/www”，可以在nginx的配置文件中看到，所以现在就要修改nginx配置文件中的代码路径，来部署我们自己的代码。<br>如果通过命令行来修改，执行<br><code>vim /usr/local/etc/nginx/nginx.conf</code></p><p>打开nginx.conf文件，找到</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">       listen       8080;</div><div class="line">       server_name  localhost;</div><div class="line">       </div><div class="line">       #access_log  logs/host.access.log  main;</div><div class="line">   </div><div class="line">       location / &#123;</div><div class="line">           root   html;</div><div class="line">           index  index.html index.htm;</div><div class="line">       &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure><p>其中listen 后面是端口号，server_name是匹配的url地址，location中的root是代码的根目录，index是启动项的名称。<br>nginx的一大优势是可以同时监听多个端口，所以我们可以在下面再启动一个server，定义如下</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">   listen       80;</div><div class="line">   server_name  localhost;</div><div class="line">    </div><div class="line">   #access_log  logs/host.access.log  main;</div><div class="line">    </div><div class="line">   location / &#123;</div><div class="line">       root   /Users/user/www;</div><div class="line">       index  index.html index.htm;</div><div class="line">   &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure><p>此时在地址栏中输入”localhost:80”即可访问对应的目录。</p><h2 id="可能出现的问题"><a href="#可能出现的问题" class="headerlink" title="可能出现的问题"></a>可能出现的问题</h2><h3 id="报错”nginx-emerg-bind-to-0-0-0-0-8080-failed-48-Address-already-in-use-”"><a href="#报错”nginx-emerg-bind-to-0-0-0-0-8080-failed-48-Address-already-in-use-”" class="headerlink" title="报错”nginx: [emerg] bind() to 0.0.0.0:8080 failed (48: Address already in use)”"></a>报错”nginx: [emerg] bind() to 0.0.0.0:8080 failed (48: Address already in use)”</h3><p>这种情况是端口已经被占用，可能是之前启动了   apache服务，已经占用了80端口，把listen的端口换一个就可以</p><h3 id="报错”403-Forbidden”"><a href="#报错”403-Forbidden”" class="headerlink" title="报错”403 Forbidden”"></a>报错”403 Forbidden”</h3><p>这种情况是nginx的user项是nobody，无权访问当前的目录，网上有两种解决方法，比较简单的是直接修改user为root或者当前的用户名，user配置在nginx.conf的第一行，将其修改为<code>#user root</code></p><p>然后在终端里执行<code>sudo nginx -s reload</code>重新启动nginx。</p><p>第二种方法是为当前目录添加权限，使任何人都可以访问，在终端里依次执行以下命令。</p><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">chmod o+x User/user</div><div class="line">chmod o+x User/user/Documents</div><div class="line">...</div><div class="line">chmod o+x User/user/.../html</div><div class="line">chmod o+x User/user/.../html/js</div><div class="line">chmod o+x User/user/.../html/css</div><div class="line">chmod o+x User/user/.../html/img</div></pre></td></tr></table></figure>这样可以为各级目录添加权限，但很麻烦，建议使用第一种方法。</code></pre><h2 id="其他常用命令"><a href="#其他常用命令" class="headerlink" title="其他常用命令"></a>其他常用命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">sudo nginx              #启动nginx</div><div class="line">sudo nginx -s reload    #修改配置后重新加载生效</div><div class="line">sudo nginx -s reopen   #重新打开日志文件</div><div class="line">sudo nginx -s stop  #快速停止nginx</div><div class="line">sudo nginx -s quit  #完整有序的停止nginx</div><div class="line">sudo nginx -t     #测试当前配置文件是否正确</div></pre></td></tr></table></figure><h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul><li><a href="http://learnaholic.me/2012/10/10/installing-nginx-in-mac-os-x-mountain-lion/" target="_blank" rel="noopener">Mac下nginx配置</a></li><li><a href="http://itindex.net/detail/52181-nginx.conf-nginx" target="_blank" rel="noopener">ngnix权限问题</a></li></ul>]]></content>
     
@@ -78,7 +82,7 @@
       <category term="Mac" scheme="http://yoursite.com/categories/Mac/"/>
     
     
-      <category term="Mac流派" scheme="http://yoursite.com/tags/Mac%E6%B5%81%E6%B4%BE/"/>
+      <category term="Mac" scheme="http://yoursite.com/tags/Mac/"/>
     
   </entry>
   
