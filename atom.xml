@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-23T03:33:43.382Z</updated>
+  <updated>2018-01-23T03:38:26.084Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://yoursite.com/2018/01/23/webstorm%E6%BF%80%E6%B4%BB%EF%BC%882017.3.3%EF%BC%89/"/>
     <id>http://yoursite.com/2018/01/23/webstorm激活（2017.3.3）/</id>
     <published>2018-01-23T03:23:03.097Z</published>
-    <updated>2018-01-23T03:33:43.382Z</updated>
+    <updated>2018-01-23T03:38:26.084Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="webstorm激活（2017-3-3）"><a href="#webstorm激活（2017-3-3）" class="headerlink" title="webstorm激活（2017.3.3）"></a>webstorm激活（2017.3.3）</h1><p>最新版本的webstorm更新后，无法再使用网上的那些license server ，activation code也是激活后立即失效。查到的新方法参考<a href="http://blog.lanyus.com/archives/174.html" target="_blank" rel="noopener">lanyu的博客</a>。</p><h2 id="步骤如下："><a href="#步骤如下：" class="headerlink" title="步骤如下："></a>步骤如下：</h2><ol><li>下载破解文件<br>链接: <a href="https://pan.baidu.com/s/1dFS9DaL" target="_blank" rel="noopener">https://pan.baidu.com/s/1dFS9DaL</a><br>密码: xxc2</li><li>找到对应的系统版本，mac系统对应的是IntelliJIDEALicenseServer_darwin_amd64。双击打开运行。</li><li>打开webstorm，Help -&gt; Register -&gt; License Server，填写License Server，为 <a href="http://127.0.0.1:1027" target="_blank" rel="noopener">http://127.0.0.1:1027</a> ,点击Activate即可激活<img src="http://p289f8g58.bkt.clouddn.com/markdown/20180123113013.png" alt="markdown/20180123113013.png"></li></ol><h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><ol><li>此方法只验证mac版本，其他系统不能保证一定有效。</li><li>参考资料：<a href="http://blog.lanyus.com/archives/174.html" target="_blank" rel="noopener">lanyu博客</a></li><li>lanyu博客中也提供了反向代理工具，但尝试后没有成功，各位也可以试试。</li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="WebStorm激活（2017-3-3）"><a href="#WebStorm激活（2017-3-3）" class="headerlink" title="WebStorm激活（2017.3.3）"></a>WebStorm激活（2017.3.3）</h1><p>最新版本的webstorm更新后，无法再使用网上的那些license server ，activation code也是激活后立即失效。查到的新方法参考<a href="http://blog.lanyus.com/archives/174.html" target="_blank" rel="noopener">lanyu的博客</a>。</p><h2 id="步骤如下："><a href="#步骤如下：" class="headerlink" title="步骤如下："></a>步骤如下：</h2><ol><li>下载破解文件<br>链接: <a href="https://pan.baidu.com/s/1dFS9DaL" target="_blank" rel="noopener">https://pan.baidu.com/s/1dFS9DaL</a><br>密码: xxc2</li><li>找到对应的系统版本，mac系统对应的是IntelliJIDEALicenseServer_darwin_amd64。双击打开运行。</li><li>打开webstorm，Help -&gt; Register -&gt; License Server，填写License Server，为 <a href="http://127.0.0.1:1027" target="_blank" rel="noopener">http://127.0.0.1:1027</a> ,点击Activate即可激活<img src="http://p289f8g58.bkt.clouddn.com/markdown/20180123113013.png" alt="markdown/20180123113013.png"></li></ol><h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><ol><li>此方法只验证mac版本，其他系统不能保证一定有效。</li><li>参考资料：<a href="http://blog.lanyus.com/archives/174.html" target="_blank" rel="noopener">lanyu博客</a></li><li>lanyu博客中也提供了反向代理工具，但尝试后没有成功，各位也可以试试。</li></ol>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;webstorm激活（2017-3-3）&quot;&gt;&lt;a href=&quot;#webstorm激活（2017-3-3）&quot; class=&quot;headerlink&quot; title=&quot;webstorm激活（2017.3.3）&quot;&gt;&lt;/a&gt;webstorm激活（2017.3.3）&lt;/h1&gt;&lt;
+        &lt;h1 id=&quot;WebStorm激活（2017-3-3）&quot;&gt;&lt;a href=&quot;#WebStorm激活（2017-3-3）&quot; class=&quot;headerlink&quot; title=&quot;WebStorm激活（2017.3.3）&quot;&gt;&lt;/a&gt;WebStorm激活（2017.3.3）&lt;/h1&gt;&lt;
       
     
     </summary>
