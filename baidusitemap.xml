@@ -4,31 +4,11 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/12/21/%E4%BD%BF%E7%94%A8DeDRM%E5%8E%BB%E9%99%A4Kindle%E7%9A%84DRM%E4%BF%9D%E6%8A%A4/</loc>
-    <lastmod>2018-01-23T03:54:57.858Z</lastmod>
-    <data>
-        <display>
-        <title>使用DeDRM去除kindle的DRM保护</title>
-        <pubTime>2017-12-21T06:04:18.000Z</pubTime>
-        
-        <tag>Mac</tag>
-         
-         
-           
-             
-              <breadCrumb title="Mac" url="http://yoursite.com/categories/Mac/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2018/01/23/WebStorm%E6%BF%80%E6%B4%BB%EF%BC%882017.3.3%EF%BC%89/</loc>
-    <lastmod>2018-01-23T03:52:55.726Z</lastmod>
+    <lastmod>2018-01-23T05:13:01.047Z</lastmod>
     <data>
         <display>
-        <title>WebStorm激活（2017.3.3版）</title>
+        <title>WebStorm激活</title>
         <pubTime>2018-01-23T03:41:22.000Z</pubTime>
         
         <tag>Mac</tag>
@@ -45,11 +25,31 @@
     
   <url>
     <loc>http://yoursite.com/2016/12/21/Mac-%E5%AE%89%E8%A3%85nginx%E5%B0%8F%E7%BB%93/</loc>
-    <lastmod>2018-01-23T03:41:17.581Z</lastmod>
+    <lastmod>2018-01-23T05:04:51.411Z</lastmod>
     <data>
         <display>
         <title>Mac安装nginx小结</title>
         <pubTime>2016-12-21T02:52:23.000Z</pubTime>
+        
+        <tag>Mac</tag>
+         
+         
+           
+             
+              <breadCrumb title="Mac" url="http://yoursite.com/categories/Mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/12/21/%E4%BD%BF%E7%94%A8DeDRM%E5%8E%BB%E9%99%A4Kindle%E7%9A%84DRM%E4%BF%9D%E6%8A%A4/</loc>
+    <lastmod>2018-01-23T03:54:57.858Z</lastmod>
+    <data>
+        <display>
+        <title>使用DeDRM去除kindle的DRM保护</title>
+        <pubTime>2017-12-21T06:04:18.000Z</pubTime>
         
         <tag>Mac</tag>
          
