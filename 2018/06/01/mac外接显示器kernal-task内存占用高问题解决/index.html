@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Front-end">
 <meta property="og:description" content="遇到的问题mac连接外接显示器之后，kernal_task占用的cpu飙升，通常达到500%，电脑卡顿，打字都是2s后才显示。遍寻方案无果，在英文网站上发现了解决方法。记录如下。 解决方案osx版本 10.13.2 解决方案 开机时进入Recovery Mode（开机的时候按住Command + R） 选择语言之后，左上角 Utility &amp;gt; Terminal开启终端，命令行输入csruti">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-01T02:54:50.585Z">
+<meta property="og:updated_time" content="2018-06-01T05:08:19.118Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac外接显示器kernal_task内存占用高问题解决">
 <meta name="twitter:description" content="遇到的问题mac连接外接显示器之后，kernal_task占用的cpu飙升，通常达到500%，电脑卡顿，打字都是2s后才显示。遍寻方案无果，在英文网站上发现了解决方法。记录如下。 解决方案osx版本 10.13.2 解决方案 开机时进入Recovery Mode（开机的时候按住Command + R） 选择语言之后，左上角 Utility &amp;gt; Terminal开启终端，命令行输入csruti">
@@ -386,14 +386,14 @@
 <h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><h2 id="osx版本-10-13-2-解决方案"><a href="#osx版本-10-13-2-解决方案" class="headerlink" title="osx版本 10.13.2 解决方案"></a>osx版本 10.13.2 解决方案</h2><ol>
 <li>开机时进入Recovery Mode（开机的时候按住Command + R）</li>
 <li>选择语言之后，左上角 Utility &gt; Terminal开启终端，命令行输入<code>csrutil disable</code>（禁用系统文件保护）</li>
-<li>重启，此处原文章要求修改此文件<br><code>/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/ACPI_SMC_PlatformPlugin.kext/Contents/Resources/[MacModelIdentifier].plist</code><br>其中MacModelIdentifier是指Mac的识别符，查看方式（Mac &gt; 关于本机 &gt; 系统报告 &gt; 型号识别符），找到对应文件后，将此文件改为 <code>bugfix.plist</code>（或者其他任意名字）。<br>但是我的系统版本号为 11.4，并没有对应文件。 此时参考低版本的方法，将<code>X86PlatformShim.kext</code>改名为<code>X86PlatformShim.kext.disabled</code>。</li>
+<li>重启，此处原文章要求修改此文件<br><code>/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/ACPI_SMC_PlatformPlugin.kext/Contents/Resources/[MacModelIdentifier].plist</code><br>其中MacModelIdentifier是指Mac的识别符，查看方式（Mac &gt; 关于本机 &gt; 系统报告 &gt; 型号识别符），找到对应文件后，将此文件改为 <code>bugfix.plist</code>（或者其他任意名字）。<br>但是我的系统版本号为 11.4，并没有对应文件。 此时参考低版本的方法，将<code>`/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/</code>目录下的<code>X86PlatformShim.kext</code>改名为<code>X86PlatformShim.kext.disabled</code>。</li>
 <li>清除kext缓存  （不确定是否需要这步）<br><code>sudo touch /System/Library/Extensions</code></li>
 <li>重启，查看kernal_task的CPU占用是否有所改善，如果可以的话，重新进入Recovery Mode，<code>csrutil enable</code></li>
 </ol>
 <h2 id="低版本解决方法"><a href="#低版本解决方法" class="headerlink" title="低版本解决方法"></a>低版本解决方法</h2><ol>
 <li>可能低版本没有系统文件保护，所以给出的资料就是高版本的其中几步。</li>
 <li><p>通过重命名关闭kext  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/Plugins  </div><div class="line">sudo mv X86PlatformShim.kext X86PlatformShim.kext.disabled</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> cd /System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/Plugins  </div><div class="line">sudo mv X86PlatformShim.kext X86PlatformShim.kext.disabled</div></pre></td></tr></table></figure>
 </li>
 <li><p>清除缓存<br><code>sudo touch /System/Library/Extensions/</code></p>
 </li>
