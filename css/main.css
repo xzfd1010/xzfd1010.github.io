@@ -7,10 +7,6 @@ html {
 body {
   margin: 0;
 }
-ol,ul{
-  -webkit-padding-start: 20px;
-  padding-left:20px;
-}
 article,
 aside,
 details,
@@ -1684,7 +1680,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0a30f4;
+  background: #e7fff5;
 }
 .links-of-blogroll {
   font-size: 13px;
