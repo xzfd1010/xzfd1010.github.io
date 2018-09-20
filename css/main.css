@@ -9,6 +9,7 @@ body {
 }
 ol,ul{
   -webkit-padding-start: 20px;
+  padding-left:20px;
 }
 article,
 aside,
