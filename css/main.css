@@ -7,6 +7,9 @@ html {
 body {
   margin: 0;
 }
+ol,ul{
+  -webkit-padding-start: 20px;
+}
 article,
 aside,
 details,
