@@ -289,6 +289,11 @@ a:hover {
 ul {
   list-style: none;
 }
+ul,
+ol {
+  padding-left: 20px;
+  -webkit-padding-start: 20px;
+}
 blockquote {
   margin: 0;
   padding: 0;
@@ -1680,7 +1685,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e7fff5;
+  background: #443614;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2741,4 +2746,9 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+ul,
+ol {
+  -webkit-padding-start: 20px;
+  padding-left: 20px;
 }
